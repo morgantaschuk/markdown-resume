@@ -8,13 +8,16 @@ set -aou pipefail
 ###
 ### Error checking sufficient to prevent shooting self in foot
 ### Author: Morgan Taschuk
+### Repository: https://github.com/morgantaschuk/markdown-resume
 ###############################
 
 
 ### Change these if different sections are needed. Ordering matters.
 sections=( Header Education Employment Service Presentations Publications )
 
-
+#get the directory this script is executing from
+CURR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#absolute path
 DIR=$(readlink -f $1)
 TFILE="$(mktemp)"
 OUT="${DIR}/$(basename $DIR).pdf"
@@ -35,7 +38,7 @@ for section in ${sections[@]}; do
 done
 
 # pdf it
-cmd="markdown-pdf -s default.css -o ${OUT} ${TFILE}"
+cmd="markdown-pdf -s ${CURR}/default.css -o ${OUT} ${TFILE}"
 echo $cmd
 eval "${cmd}"
 echo "Resume at ${OUT}"
