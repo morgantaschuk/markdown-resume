@@ -1,0 +1,15 @@
+Your Name
+==========================================
+
+email@email.com | 111-111-1111 | [github.com/yourname](https://github.com/yourname) | [@yourname](https://twitter.com/yourname)
+
+Highlights
+-------------
+
+Made a resume formatter
+* Misused bash to concatenate files together
+* Made a temp file the right way
+* Mostly ignored error handling, except one statement
+* But it only took me like 20 minutes so yay
+
+Languages: Node JS, bash
