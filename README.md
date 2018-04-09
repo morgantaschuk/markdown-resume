@@ -5,6 +5,8 @@ Are you as tired of fussing with your resume as I am? Do you not want to mess wi
 
 Markdown Resume takes Markdown formatted files and compiles them into a PDF file. Based on the contents of the Markdown and configurations you give it, you can make resumes with different sections in different orders. Then format the whole thing with CSS and hand it to whoever wants it.
 
+Example resume with the test data (below): [test.pdf](test/test.pdf)
+
 
 ## Dependencies
 
@@ -20,7 +22,7 @@ For the most basic build:
 
     ./build_resume.sh DIR
 
-Where DIR is the location of your Markdown files.
+Where DIR is the location of your Markdown files. They need to be named specifically
 
 ## No, really. Usage
 
@@ -32,7 +34,7 @@ More realistically, I have a directory in my Dropbox called MASTER with these fi
 * Presentations : Talks I've given
 * Publications : papers and posters
 
-When I start a new resume, I'll copy all those files over to a new directory and cut stuff out as necessary. Then
+When I start a new resume, I'll copy all those files over to a new directory `NEW_DIR` and cut stuff out as necessary. Then
 
     ./build_resume NEW_DIR
 
@@ -42,7 +44,7 @@ And hopefully a new wild resume appears.
 
 I've included sample files in test/
 
-   ./build_resume.sh test
+    ./build_resume.sh test
 
 It should create a file called test.pdf in the directory you give with the formatted resume.
 
