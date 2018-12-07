@@ -13,7 +13,7 @@ set -aou pipefail
 
 
 ### Change these if different sections are needed. Ordering matters.
-sections=( Header Education Employment Service Presentations Publications )
+sections=( Header Employment Education Service Publications Presentations )
 
 #get the directory this script is executing from
 CURR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
