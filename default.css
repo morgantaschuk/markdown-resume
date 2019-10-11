@@ -3,8 +3,9 @@
 * https://github.com/alanshaw/markdown-pdf/issues/63
 */
 a[href]:after { content : "" }
-
-
+img[src*="#16px"] {
+   height:16px;
+}
 
 /* Heavily adapted from The Main Floor http://typespiration.com/design/the-main-floor/ via @typespiration */
 h1 {
@@ -12,7 +13,7 @@ h1 {
     font-family: 'Roboto';
     font-size: 16px;
     font-weight: bold;
-    line-height: 18px;
+    line-height: 14px;
     margin-bottom: 10px;
     max-width: 700px;
     position: relative;
@@ -25,6 +26,7 @@ h1:after {
     height: 2px;
     margin-top: 5px;
 }
+
 
 h2 {
     color: #2B2B2B;
@@ -49,7 +51,8 @@ h3 {
     color: #2B2B2B;
     font-family: 'Roboto';
     font-size: 12px;
-    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     max-width: 700px;
     position: relative;
 }
@@ -59,6 +62,10 @@ h3:after {
     display: block;
 }
 
+p {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
 
 body {
     color: #353634;
@@ -76,6 +83,5 @@ a {
 
 a:hover {
     color: #353634;
-}
-
+} 
 
