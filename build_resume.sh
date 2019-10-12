@@ -13,12 +13,12 @@ set -aou pipefail
 
 
 ### Change these if different sections are needed. Ordering matters.
-sections=( Header Employment Education Service Publications Presentations )
+sections=( Header Employment Education Service Presentations Publications )
 
 #get the directory this script is executing from
 CURR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-#absolute path
-DIR=$(readlink -f $1)
+#absolute path, sadly Perl works on Ubuntu and Mac where readlink -f does not
+DIR=$(perl -MCwd -e 'print Cwd::abs_path shift' $1)
 TFILE="$(mktemp)"
 OUT="${DIR}/$(basename $DIR).pdf"
 
