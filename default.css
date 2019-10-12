@@ -1,18 +1,32 @@
-/* 
+/*
 * Keep this in, otherwise markdown-pdf renders links with Linkname (link url).
 * https://github.com/alanshaw/markdown-pdf/issues/63
 */
 a[href]:after { content : "" }
-img[src*="#16px"] {
-   height:16px;
+
+/*
+You want to resize images (and svgs) on the fly? Here you go.
+![](image.jpg#10px)
+*/
+img[src*="#24px"] {
+   height:24px;
+}
+img[src*="#10px"] {
+   height:10px;
 }
 
+
+ul{;
+  padding-left: 13px;
+  padding-top: 2px;
+  margin-top: 0px;
+}
 /* Heavily adapted from The Main Floor http://typespiration.com/design/the-main-floor/ via @typespiration */
 h1 {
     color: #2B2B2B;
     font-family: 'Roboto';
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bolder;
     line-height: 14px;
     margin-bottom: 10px;
     max-width: 700px;
@@ -34,6 +48,7 @@ h2 {
     font-size: 14px;
     font-weight: 300;
     line-height: 16px;
+    font-weight: bold;
     margin-bottom: 5px;
     max-width: 700px;
     position: relative;
@@ -50,21 +65,27 @@ h2:after {
 h3 {
     color: #2B2B2B;
     font-family: 'Roboto';
+    font-weight: bold;
     font-size: 12px;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 0px;
     max-width: 700px;
     position: relative;
 }
 
 h3:after {
+    background: #505050;
     content: '';
     display: block;
+    height: 1px;
+    margin-top:2px;
+    margin-bottom: 5px;
 }
 
 p {
   margin-top: 2px;
   margin-bottom: 5px;
+  text-align: justify;
 }
 
 body {
@@ -83,5 +104,4 @@ a {
 
 a:hover {
     color: #353634;
-} 
-
+}
